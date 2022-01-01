@@ -1,6 +1,13 @@
 image:
   file: .gitpod.Dockerfile
-  
+
+tasks:
+  - init: |
+    sudo apt update
+    sudo apt install libcurl4-openssl-dev libssl-dev libxml2-dev
+    sudo apt install r-base r-base-dev
+
+
 vscode:
   extensions:
     - Ikuyadeu.r

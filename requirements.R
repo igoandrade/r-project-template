@@ -1,11 +1,8 @@
-install.packages('caret')
-install.packages("data.table")
-install.packages("ggplot2")
-install.packages("knitr")
-install.packages("mlr3")
-install.packages("plotly")
-install.packages("shiny")
-install.packages("tidyr")
-install.packages("tidyverse")
-install.packages("tidyquant")
-install.packages('xgboost')
+# Package names
+packages <- c("ggplot2", "readxl", "dplyr", "tidyr", "caret", "data.table", "mlr3", "knitr", "plotly", "shiny", "tidyr", "car", "tidyverse", "tidyquant", "xgboost", "markdown", "MASS",  "magrittr")
+
+# Install packages not yet installed
+installed_packages <- packages %in% rownames(installed.packages())
+if (any(installed_packages == FALSE)) {
+  install.packages(packages[!installed_packages])
+}

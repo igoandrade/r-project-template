@@ -1,9 +1,10 @@
 image:
   file: .gitpod.Dockerfile
-      
+
 tasks:
   - command: Rscript requirements.R
 
 vscode:
   extensions:
     - Ikuyadeu.r
+    - reditorsupport.r-lsp
